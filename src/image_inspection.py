@@ -43,6 +43,6 @@ if l8.size().getInfo() > 0:
     map = folium.Map(location=[41.4925, -99.9018], zoom_start=10)
     map.add_ee_layer(clipped_image, vis_params, "Landsat 8 TOA Image")
     map.add_child(folium.LayerControl())
-    display(map) # Explicitly display the map in the notebook
+    map # Explicitly display the map in the notebook
 else:
     print("No images found for the specified filters and date range.")
